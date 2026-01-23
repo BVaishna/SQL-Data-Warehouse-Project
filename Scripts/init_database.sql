@@ -1,4 +1,5 @@
 USE master;
+--Seperate batches when woring with multiple SQL Statements
 GO
 
 IF EXISTS (SELECT 1 FROM sys.databases WHERE name = 'Datawarehouse')
@@ -17,7 +18,7 @@ GO
 
 --Create Schema
 CREATE SCHEMA bronze;
-GO --Seperate batches when woring with multiple SQL Statements
+GO 
 CREATE SCHEMA silver;
 GO
 CREATE SCHEMA gold;
